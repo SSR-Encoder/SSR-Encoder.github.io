@@ -87,17 +87,11 @@
   <img class="summary-img" src="./SSR-Encoder/sup_face.jpg" style="width:100%;"> <br>
 </div>
 <div class="content">
-  <h2>Accessorization</h2>
-  <p>Outfitting a dog with accessories. The identity of the subject is preserved and many different outfits or accessories can be applied to the dog given a prompt of type <em>"a [V] dog wearing a police/chef/witch outfit''</em>. We observe a realistic interaction between the subject dog and the outfits or accessories, as well as a large variety of possible options.</p>
+  <h2>Generalizable to video generation models</h2>
+  <p>Our SSR-Encoder is not only versatile enough to adapt to various custom models and controllability modules, but it can also be effectively applied to video generation, integrating seamlessly with video generation models. We demonstrate the impact of combining our SSR-Encoder with Animatediff. Despite not being trained on video data, our method can flawlessly combine with Animatediff to produce videos that maintain consistent character identities with reference images.</p>
   <br>
-  <img class="summary-img" src="./DreamBooth_files/accessories.png" style="width:100%;"> <br>
+  <img class="summary-img" src="./SSR-Encoder_files/sup_animate.jpg" style="width:100%;"> <br>
 </div>
-<div class="content">
-  <h2>Societal Impact</h2>
-  <p>This project aims to provide users with an effective tool for synthesizing personal subjects (animals, objects) in different contexts. While general text-to-image models might be biased towards specific attributes when synthesizing images from text, our approach enables the user to get a better reconstruction of their desirable subjects. On contrary, malicious parties might try to use such images to mislead viewers. This is a common issue, existing in other generative models approaches or content manipulation techniques. Future research in generative modeling, and specifically of personalized generative priors, must continue investigating and revalidating these concerns.</p>
-  <br>
-</div>
-<div class="content">
   <h2>BibTex</h2>
   <code> @article{ruiz2022dreambooth,<br>
   &nbsp;&nbsp;title={DreamBooth: Fine Tuning Text-to-image Diffusion Models for Subject-Driven Generation},<br>
@@ -105,12 +99,6 @@
   &nbsp;&nbsp;booktitle={arXiv preprint arxiv:2208.12242},<br>
   &nbsp;&nbsp;year={2022}<br>
   } </code> 
-</div>
-<div class="content" id="acknowledgements">
-  <p><strong>Acknowledgements</strong>:
-    We thank Rinon Gal, Adi Zicher, Ron Mokady, Bill Freeman, Dilip Krishnan, Huiwen Chang and Daniel Cohen-Or for their valuable inputs that helped improve this work, and to Mohammad Norouzi, Chitwan Saharia and William Chan for providing us with their support and the pretrained models of Imagen. Finally, a special thank you to David Salesin for his feedback, advice and for his support for the project.
-    <!-- Recycling a familiar <a href="https://chail.github.io/latent-composition/">template</a> ;). --> 
-  </p>
 </div>
 </body>
 </html>
