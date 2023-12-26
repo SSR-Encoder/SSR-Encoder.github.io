@@ -9,12 +9,6 @@
 <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
 </script>
-<script type="text/x-mathjax-config">
-  MathJax.Hub.Config({
-      tex2jax: {inlineMath: [['$', '$']]},
-      messageStyle: "none"
-  });
-</script>
 </head>
 
 <body>
@@ -42,7 +36,7 @@
   <h3 style="text-align:center; font-size: 16px;"><em>Our SSR-Encoder is a model generalizable encoder, which is able to guide any customized diffusion models for single subject-driven image generation (top branch) or multiple subject-driven image generation from different images (middle branch) based on the image representation selected by the text query or mask query without any additional test-time finetuning. Furthermore, our SSR-Encoder can also be applied for the controllable generation with additional control (bottom branch).</em></h3>
     <font size="+2">
           <p style="text-align: center;">
-            <a href="https://arxiv.org/abs/2208.12242" target="_blank">[Paper]</a> &nbsp;&nbsp;&nbsp;&nbsp;
+            <a href="ssr-encoder.github.io" target="_blank">[Paper]</a> &nbsp;&nbsp;&nbsp;&nbsp;
           </p>
     </font>
 </div>
@@ -60,7 +54,7 @@
 <p>Selective subject-driven image generation aims to generate target subjects in a reference image with high fidelity and creative editability, guided by the user's specific queries (text or mask). To tackle this, we propose our SSR-Encoder, a specialized framework designed to integrate with any custom diffusion model without necessitating test-time fine-tuning. Formally, for a given reference image <span class="tex">\mathit{I}</span> and a user query <span class="tex">\mathit{q}</span>, the SSR-Encoder effectively captures subject-specific information and generates multi-scale subject embeddings <span class="tex">\mathit{c_s}</span>. These multi-scale subject embeddings <span class="tex">\mathit{c_s}</span> are subsequently integrated into the U-Net model with trainable copies of cross-attention layers. The generation process, conditioned on both subject embeddings <span class="tex">c_s</span> and text embedding <span class="tex">c_t</span>, allows for the production of desired subjects with high fidelity and creative editability.</p>
   <br>
   <img class="summary-img" src="./SSR-Encoder_files/method_v7.png" style="width:100%;"> <br>
-  <p>Given a query text-image pairs <span class="tex">$\left(q, I\right)$</span>, the SSR-Encoder employs a token-to-patch aligner to highlight the selective regions in the reference image by the query. It extracts more fine-grained details of the subject through the detail-preserving subject encoder, projecting multi-scale visual embeddings via the token-to-patch aligner. Then, we adopt subject-conditioned generation to generate specific subjects with high fidelity and creative editability. During training, we adopt reconstruction loss <span class="tex">L_{LDM}</span> and embedding consistency regularization loss <span class="tex">L_{reg}</span> for selective subject-driven learning.</p>
+  <p>Given a query text-image pairs <span class="tex">$$\left(q, I\right)$$</span>, the SSR-Encoder employs a token-to-patch aligner to highlight the selective regions in the reference image by the query. It extracts more fine-grained details of the subject through the detail-preserving subject encoder, projecting multi-scale visual embeddings via the token-to-patch aligner. Then, we adopt subject-conditioned generation to generate specific subjects with high fidelity and creative editability. During training, we adopt reconstruction loss <span class="tex">L_{LDM}</span> and embedding consistency regularization loss <span class="tex">L_{reg}</span> for selective subject-driven learning.</p>
   <br>
 </div>
 <div class="content">
@@ -91,15 +85,6 @@
   <p>Our SSR-Encoder is not only versatile enough to adapt to various custom models and controllability modules, but it can also be effectively applied to video generation, integrating seamlessly with video generation models. We demonstrate the impact of combining our SSR-Encoder with Animatediff. Despite not being trained on video data, our method can flawlessly combine with Animatediff to produce videos that maintain consistent character identities with reference images.</p>
   <br>
   <img class="summary-img" src="./SSR-Encoder_files/sup_animate.jpg" style="width:100%;"> <br>
-</div>
-  <div class="content">
-  <h2>BibTex</h2>
-  <code> @article{ruiz2022dreambooth,<br>
-  &nbsp;&nbsp;title={DreamBooth: Fine Tuning Text-to-image Diffusion Models for Subject-Driven Generation},<br>
-  &nbsp;&nbsp;author={Ruiz, Nataniel and Li, Yuanzhen and Jampani, Varun and Pritch, Yael and Rubinstein, Michael and Aberman, Kfir},<br>
-  &nbsp;&nbsp;booktitle={arXiv preprint arxiv:2208.12242},<br>
-  &nbsp;&nbsp;year={2022}<br>
-  } </code> 
 </div>
 </body>
 </html>
