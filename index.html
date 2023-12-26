@@ -54,7 +54,7 @@
 <p>Selective subject-driven image generation aims to generate target subjects in a reference image with high fidelity and creative editability, guided by the user's specific queries (text or mask). To tackle this, we propose our SSR-Encoder, a specialized framework designed to integrate with any custom diffusion model without necessitating test-time fine-tuning. Formally, for a given reference image <span class="tex">\mathit{I}</span> and a user query <span class="tex">\mathit{q}</span>, the SSR-Encoder effectively captures subject-specific information and generates multi-scale subject embeddings <span class="tex">\mathit{c_s}</span>. These multi-scale subject embeddings <span class="tex">\mathit{c_s}</span> are subsequently integrated into the U-Net model with trainable copies of cross-attention layers. The generation process, conditioned on both subject embeddings <span class="tex">c_s</span> and text embedding <span class="tex">c_t</span>, allows for the production of desired subjects with high fidelity and creative editability.</p>
   <br>
   <img class="summary-img" src="./SSR-Encoder_files/method_v7.png" style="width:100%;"> <br>
-  <p>Given a query text-image pairs <span class="tex">$$\left(q, I\right)$$</span>, the SSR-Encoder employs a token-to-patch aligner to highlight the selective regions in the reference image by the query. It extracts more fine-grained details of the subject through the detail-preserving subject encoder, projecting multi-scale visual embeddings via the token-to-patch aligner. Then, we adopt subject-conditioned generation to generate specific subjects with high fidelity and creative editability. During training, we adopt reconstruction loss <span class="tex">L_{LDM}</span> and embedding consistency regularization loss <span class="tex">L_{reg}</span> for selective subject-driven learning.</p>
+  <p>Given a query text-image pairs <span class="tex">$\left(q, I\right)$</span>, the SSR-Encoder employs a token-to-patch aligner to highlight the selective regions in the reference image by the query. It extracts more fine-grained details of the subject through the detail-preserving subject encoder, projecting multi-scale visual embeddings via the token-to-patch aligner. Then, we adopt subject-conditioned generation to generate specific subjects with high fidelity and creative editability. During training, we adopt reconstruction loss <span class="tex">$L_{LDM}$</span> and embedding consistency regularization loss <span class="tex">$L_{reg}$</span> for selective subject-driven learning.</p>
   <br>
 </div>
 <div class="content">
@@ -64,7 +64,7 @@
 </div>
 <div class="content">
   <h2>Attention visualization</h2>
-  <p>Visualization of attention maps <span class="tex">A_{t2p}</span> in SSR-Encoder.</p>
+  <p>Visualization of attention maps <span class="tex">$A_{t2p}$</span> in SSR-Encoder.</p>
   <br>
   <img class="summary-img" src="./SSR-Encoder_files/images_07.jpg" style="width:100%;"> <br>
 </div>
